@@ -16,7 +16,7 @@ class Triangle:
         Returns:
             bool: True if the triangle is valid, False otherwise
         '''
-        pass
+        return self.a+self.b > self.c and self.a+self.c > self.b and self.c+self.b > self.a
     
     def get_type(self) -> str:
         '''
@@ -34,7 +34,7 @@ class Triangle:
         Returns:
             float: return perimeter of the triangle if the triangle is valid, 0 otherwise
         '''
-        pass
+        return self.a+ self.b+self.c
 
     def area(self) -> float:
         '''
@@ -44,4 +44,7 @@ class Triangle:
         Returns:
             float: return area of the triangle if the triangle is valid, 0 otherwise
         '''
-        pass
+        p=(self.a+self.b+self.c)/2
+        return sqrt(p*(p-self.a)*(p-self.b)*(p-self.c))
+a=Triangle(1,4,1)
+print(a.area())
